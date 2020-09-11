@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Service
-public class ItemServiceImpl implements ItemService {
+@Service("RestTemplate")
+public class ItemServiceImplRestTemplate implements ItemService {
 
     @Autowired
     private RestTemplate restClient;

@@ -3,6 +3,7 @@ package com.fernandofuentesfullstack.item.application;
 import com.fernandofuentesfullstack.item.domain.model.Item;
 import com.fernandofuentesfullstack.item.domain.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,7 @@ import java.util.List;
 @RequestMapping(path = "/items")
 public class ItemController {
 
-    @Autowired
+    @Autowired @Qualifier("FeignClient")
     private ItemService itemService;
 
     @GetMapping
